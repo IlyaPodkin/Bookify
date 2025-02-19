@@ -25,7 +25,7 @@ namespace Api.Data.DataServices
         public async Task<bool> Update(Guid id, UserDTO userDTO)
         {
             var result = await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
-            if (result != null)
+            if (result == null)
             {
                 return false;
             }
@@ -39,7 +39,7 @@ namespace Api.Data.DataServices
         public async Task<bool> Delete(Guid id)
         {
             var result = await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
-            if (result != null) 
+            if (result == null) 
             {
                 return false;
             }

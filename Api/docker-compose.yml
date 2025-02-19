@@ -1,15 +1,22 @@
+version: '3.8'
+
 services:
   postgres:
-    image: postgres:15
-    container_name: postgres-db
-    environment:
-      POSTGRES_USER: ilya_podkin
-      POSTGRES_PASSWORD: qwerty4415@
-      POSTGRES_DB: BookifyDB
+    image: postgres:latest
+    container_name: bookify-db
+    environment: 
+        POSTGRES_USER: ilya_podkin
+        POSTGRES_PASSWORD: qwerty4415
+        POSTGRES_DB: BookifyDB
     ports:
-      - "8080:8080"
+      - "5432:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
-
+        - postgres_data:/var/lib/postgresql/data
+    networks:
+        - game-network
 volumes:
-  postgres_data:
+    postgres_data:
+networks:
+    game-network:
+        driver: bridge    
+    

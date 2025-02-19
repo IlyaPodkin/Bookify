@@ -33,7 +33,7 @@ namespace Api.Controllers
         public async Task<IActionResult> UpdateUser(Guid id, UserDTO userDTO) 
         {
             var result = await _service.Update(id, userDTO);
-            if (!result) 
+            if (!result)
             {
                 return BadRequest("Изменения не были применены");
             }
@@ -44,7 +44,7 @@ namespace Api.Controllers
         public async Task<IActionResult> DeleteUser(Guid id) 
         {
             var result = await _service.Delete(id);
-            if (!result) 
+            if (!result)
             {
                 return BadRequest("Не удалось удалить пользователя.");
             }
