@@ -1,0 +1,53 @@
+.authorization-container{
+    display: flex;
+    background: white;
+    border-radius: 50px;
+    max-width: 600px;
+    max-height: 700px;
+    min-width: 500px;
+    min-height: 500px;
+    height: 70%;
+    width: 60%;
+    box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.4);
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-family: "Montserrat";
+    justify-content: space-around;
+    padding:80px 100px;
+    box-sizing: border-box;
+
+}
+.authorization-header{
+    align-self: center;
+}
+.login-input{
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+}
+.login-input:focus{
+    border-bottom-color: rgb(83, 83, 83);
+}
+.password-input{
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+}
+.password-input:focus{
+    font-size: 20pt;
+    border-bottom-color: rgb(83, 83, 83);
+}
+.button-sign-in{
+    height: 50px;
+    font-size: 10pt;
+}
+.link-container{
+    display: flex;
+    justify-content: space-around;
+}
+.link-password-recovery{
+    
+}
+.link-sign-up{
+
+}

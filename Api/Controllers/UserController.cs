@@ -18,11 +18,14 @@ namespace Api.Controllers
         [HttpPost("user")]
         public async Task<IActionResult> CreateUser(UserDTO userDTO) 
         {
-            var result = await _service.Create(userDTO);
-            if (result == null) 
+            if (string.IsNullOrWhiteSpace(userDTO.Name) ||
+                string.IsNullOrWhiteSpace(userDTO.Email) ||
+                string.IsNullOrWhiteSpace(userDTO.Password))
             {
-                return BadRequest("Не удалось создать пользователя");
+                return BadRequest("Необходимо заполнить все обязательные поля");
+
             }
+            var result = await _service.Create(userDTO);
             return Ok(result);
         }
 
@@ -32,10 +35,17 @@ namespace Api.Controllers
         [HttpPut("user")]
         public async Task<IActionResult> UpdateUser(Guid id, UserDTO userDTO) 
         {
+            if (string.IsNullOrWhiteSpace(userDTO.Name) ||
+                string.IsNullOrWhiteSpace(userDTO.Email) ||
+                string.IsNullOrWhiteSpace(userDTO.Password))
+            {
+                return BadRequest("Поля не должны быть пустыми");
+
+            }
             var result = await _service.Update(id, userDTO);
             if (!result)
             {
-                return BadRequest("Изменения не были применены");
+                return BadRequest("Пользователь не найден");
             }
             return Ok(result);
         }
@@ -46,7 +56,7 @@ namespace Api.Controllers
             var result = await _service.Delete(id);
             if (!result)
             {
-                return BadRequest("Не удалось удалить пользователя.");
+                return BadRequest("Пользователь не найден");
             }
             return Ok(result);
         }
