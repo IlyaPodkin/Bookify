@@ -1,10 +1,10 @@
-import "../styles/authorization.css";
+import "../styles/registration.css";
 
-const Authorization = () => {
+const Registration = () => {
     return (
         <div className="authorization-container">
             <h1 className="authorization-header">Авторизация</h1>
-            <div className="input-container">
+            <div>
                 <p>E-mail</p>
                 <input type="text" className="login-input" />
                 <p>Пароль</p>
@@ -19,4 +19,4 @@ const Authorization = () => {
     )
 }
 
-export default Authorization;
+export default Registration;
