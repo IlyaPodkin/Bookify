@@ -1,4 +1,5 @@
 import "../styles/authorization.css";
+import { Link } from "react-router-dom";
 
 const Authorization = () => {
     return (
@@ -12,8 +13,8 @@ const Authorization = () => {
             </div>
             <button className="button-sign-in">Войти</button>
             <div className="link-container">
-                <a className="link-password-recovery" href="">Забыли пароль?</a>
-                <a className="link-sign-up" href="">Регистрация</a>
+                <Link className="link-password-recovery" >Забыли пароль?</Link>
+                <Link className="link-sign-up" to="/registration">Регистрация</Link>
             </div>
         </div>
     )

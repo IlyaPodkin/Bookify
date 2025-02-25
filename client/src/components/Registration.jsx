@@ -1,4 +1,5 @@
 import "../styles/registration.css";
+import { Link } from "react-router-dom";
 
 const Registration = () => {
     return (
@@ -12,9 +13,9 @@ const Registration = () => {
                 <p>Повторите пароль</p>
                 <input type="password" className="password-input" />
             </div>
-            <button className="button-sign-in">Войти</button>
+            <button className="button-sign-up">Зарегистрироваться</button>
             <div className="link-container">
-                <a className="link-sign-up" href="">Авторизация</a>
+                <Link className="link-sign-in" to="/authorization">Авторизация</Link>
             </div>
         </div>
     )

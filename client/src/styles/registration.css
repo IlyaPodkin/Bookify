@@ -48,7 +48,7 @@ input{
 .password-input:focus{
     border-bottom-color: rgb(153, 153, 153);
 }
-.button-sign-in{
+.button-sign-up{
     height: 50px;
     width: 100%;
     font-size: 10pt;
@@ -59,7 +59,7 @@ input{
     transition: background-color 0.3s ease, transform 0.2s ease;
     cursor: pointer;
 }
-.button-sign-in:active {
+.button-sign-up:active {
     transform: scale(0.95);
 }
 .link-container{
@@ -70,6 +70,6 @@ input{
 .link-password-recovery{
     color: rgb(213, 45, 255);
 }
-.link-sign-up{
+.link-sign-in{
     color: rgb(213, 45, 255);
 }
