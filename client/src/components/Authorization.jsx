@@ -5,11 +5,11 @@ const Authorization = () => {
     return (
         <div className="authorization-container">
             <h1 className="authorization-header">Авторизация</h1>
-            <div className="input-container">
+            <div className="input-authorization-container">
                 <p>E-mail</p>
-                <input type="text" className="login-input" />
+                <input type="text" className="input-authorization login" />
                 <p>Пароль</p>
-                <input type="password" className="password-input" />
+                <input type="password" className="input-authorization password" />
             </div>
             <button className="button-sign-in">Войти</button>
             <div className="link-container">

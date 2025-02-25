@@ -17,6 +17,7 @@ namespace Api.Data.Configuration
             builder.Property(u => u.Id).HasColumnName("id");
             builder.Property(u => u.Name).HasColumnName("name_user");
             builder.Property(u => u.Email).HasColumnName("user_email");
+            builder.Property(u => u.PhoneNumber).HasColumnName("user_phone");
             builder.Property(u => u.Password).HasColumnName("name_password");
         }
         private void ConfigureRelation(EntityTypeBuilder<User> builder) 
@@ -25,6 +26,7 @@ namespace Api.Data.Configuration
             builder.Property(u => u.Id).HasDefaultValueSql("gen_random_uuid()");
             builder.Property(u => u.Name).IsRequired();
             builder.Property(u => u.Email).IsRequired();
+            builder.Property(u => u.PhoneNumber).IsRequired();
             builder.Property(u => u.Password).IsRequired();
         }
         

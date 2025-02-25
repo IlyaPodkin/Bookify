@@ -14,7 +14,7 @@ namespace Api.Data.DataServices
 
         public async Task<User> Create(UserDTO userDTO)
         {
-            var result = new User() { Name = userDTO.Name, Email=userDTO.Email, Password = userDTO.Password};
+            var result = new User() { Name = userDTO.Name, Email=userDTO.Email,PhoneNumber = userDTO.PhoneNumber, Password = userDTO.Password};
             await _context.Users.AddAsync(result);
             await _context.SaveChangesAsync();
             return result;
@@ -31,6 +31,7 @@ namespace Api.Data.DataServices
             }
             result.Name = userDTO.Name;
             result.Email = userDTO.Email;
+            result.PhoneNumber = userDTO.PhoneNumber;
             result.Password = userDTO.Password;
             await _context.SaveChangesAsync();
             return true;

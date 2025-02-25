@@ -18,7 +18,8 @@
 .authorization-header{
     align-self: center;
 }
-.input-container{
+
+.input-authorization-container{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -26,28 +27,19 @@
     height: 150px;
 }
 
-input{
+.input-authorization{
     background-color: unset;
     color: aliceblue;
     font-size: 13pt;
-}
-.login-input{
     border: none;
     border-bottom: 2px solid rgb(83, 83, 83);
     outline: none;
 }
-.login-input:focus{
+
+.input-authorization:focus{
     border-bottom-color: rgb(153, 153, 153);
 }
-.password-input{
-    border: none;
-    border-bottom: 2px solid rgb(83, 83, 83);
-    outline: none;
-    width: 100%;
-}
-.password-input:focus{
-    border-bottom-color: rgb(153, 153, 153);
-}
+
 .button-sign-in{
     height: 50px;
     width: 100%;

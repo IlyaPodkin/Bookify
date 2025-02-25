@@ -11,41 +11,29 @@
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
-    padding:80px 100px;
+    padding:50px 100px;
     box-sizing: border-box;
     color: rgb(213, 45, 255);
 }
 .registration-header{
     align-self: center;
 }
-.input-container{
+.input-registration-container{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 100%;
-    height: 200px;
+    height: 350px;
 }
-
-input{
+.input-registration{
     background-color: unset;
     color: aliceblue;
     font-size: 13pt;
-}
-.login-input{
     border: none;
     border-bottom: 2px solid rgb(83, 83, 83);
     outline: none;
 }
-.login-input:focus{
-    border-bottom-color: rgb(153, 153, 153);
-}
-.password-input{
-    border: none;
-    border-bottom: 2px solid rgb(83, 83, 83);
-    outline: none;
-    width: 100%;
-}
-.password-input:focus{
+.input-registration:focus{
     border-bottom-color: rgb(153, 153, 153);
 }
 .button-sign-up{

@@ -20,6 +20,7 @@ namespace Api.Controllers
         {
             if (string.IsNullOrWhiteSpace(userDTO.Name) ||
                 string.IsNullOrWhiteSpace(userDTO.Email) ||
+                string.IsNullOrWhiteSpace(userDTO.PhoneNumber) ||
                 string.IsNullOrWhiteSpace(userDTO.Password))
             {
                 return BadRequest("Необходимо заполнить все обязательные поля");
@@ -37,6 +38,7 @@ namespace Api.Controllers
         {
             if (string.IsNullOrWhiteSpace(userDTO.Name) ||
                 string.IsNullOrWhiteSpace(userDTO.Email) ||
+                string.IsNullOrWhiteSpace(userDTO.PhoneNumber) ||
                 string.IsNullOrWhiteSpace(userDTO.Password))
             {
                 return BadRequest("Поля не должны быть пустыми");

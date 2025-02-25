@@ -45,6 +45,12 @@ namespace Api.Migrations
                         .HasColumnType("text")
                         .HasColumnName("name_password");
 
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("character varying(20)")
+                        .HasColumnName("user_phone");
+
                     b.HasKey("Id");
 
                     b.ToTable("users", (string)null);
